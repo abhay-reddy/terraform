@@ -8,9 +8,10 @@ resource "aws_key_pair" "mykey" {
 }
 
 resource "aws_instance" "myinstance" {
-  ami           = "ami-0c55b159cbfafe1f0"
+  ami           = "ami-066784287e358dad1"
   instance_type = "t2.micro"
   key_name      = aws_key_pair.mykey.key_name
+  security_groups = [aws_security_group.allow_ssh.name]
   tags = {
     Name = "demoinstance"
   }
