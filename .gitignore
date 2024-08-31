@@ -1,4 +1,5 @@
 myec2key
 myec2key.pub
 .terraform/
+.terraform.lock.hcl
 terraform*
